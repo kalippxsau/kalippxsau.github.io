@@ -23,11 +23,3 @@ ClassementBot est un puissant outil permettant de suivre la progression des joue
   ([stackoverflow.com](https://stackoverflow.com/questions/23989232/is-there-a-way-to-represent-a-directory-tree-in-a-github-readme-md) stackoverflow.com)
 
 ---
-
-## Installation
-
-Pour installer et lancer ClassementBot, suivez ces étapes :
-
-1. **Cloner le dépôt :**
-   ```bash
-   git clone https://github.com/votre-utilisateur/ClassementBot.git
