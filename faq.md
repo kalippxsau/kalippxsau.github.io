@@ -31,17 +31,17 @@ Vérifiez que le bot est en ligne avec la commande `/ping`. Assurez-vous égalem
 Les badges sont vérifiés lors de la mise à jour de votre puissance. Essayez de mettre à jour votre puissance avec `/puissance` ou `/modifier_puissance` pour déclencher une vérification.
 
 ### Comment signaler un bug ?
-Rejoignez notre [serveur de support](https://discord.gg/votre-serveur) et signalez le bug dans le canal #bug-reports. Incluez une description détaillée et des captures d'écran si possible.
+Rejoignez notre [serveur de support](https://discord.gg/1306370277931876444) et signalez le bug dans le canal #bug-reports. Incluez une description détaillée et des captures d'écran si possible.
 
 ## Support
 
 ### Comment contacter le support ?
-- Rejoignez notre [serveur Discord](https://discord.gg/votre-serveur)
+- Rejoignez notre [serveur Discord](https://discord.gg/1306370277931876444)
 - Envoyez un email à https://discord.com/channels/1306370277931876444/1330555947784867943
 - Ouvrez un ticket sur notre [GitHub](https://github.com/votre-compte/classementbot)
 
 ### Comment suggérer de nouvelles fonctionnalités ?
-Nous accueillons les suggestions sur notre [serveur Discord](https://discord.gg/votre-serveur) dans le canal #suggestions.
+Nous accueillons les suggestions sur notre [serveur Discord](https://discord.gg/1325462831726071859) dans le canal #suggestions.
 
 ### Y a-t-il des tutoriels disponibles ?
 Oui, consultez notre [documentation complète](commands.md) qui inclut des exemples et des cas d'utilisation.
