@@ -38,7 +38,7 @@ Rejoignez notre [serveur de support](https://discord.gg/1306370277931876444) et 
 ### Comment contacter le support ?
 - Rejoignez notre https://discord.gg/TXaxT8urPu
 - Envoyez un email à jarhod.lee@gmx.com
-- Ouvrez un ticket sur notre [GitHub](https://github.com/lalippxsau/classementbot)
+- Ouvrez un ticket sur notre [GitHub](https://github.com/kalippxsau.github.io/classementbot)
 
 ### Comment suggérer de nouvelles fonctionnalités ?
 Nous accueillons les suggestions sur notre [serveur Discord](https://discord.gg/1325462831726071859) dans le canal #suggestions.
