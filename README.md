@@ -4,7 +4,7 @@
 
 ClassementBot est un puissant outil permettant de suivre la progression des joueurs sur votre serveur Discord. Avec ses systèmes de classement, de badges et de visualisation, motivez votre communauté comme jamais auparavant !
 
-[Ajouter à Discord](https://discord.com/api/oauth2/authorize?client_id=VOTRE_ID_BOT&permissions=8&scope=bot%20applications.commands)
+[Ajouter à Discord](https://discord.com/api/oauth2/authorize?client_id=1338609444644458586&permissions=8&scope=bot%20applications.commands)
 
 ## Fonctionnalités principales
 
