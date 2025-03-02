@@ -36,9 +36,9 @@ Rejoignez notre [serveur de support](https://discord.gg/1306370277931876444) et 
 ## Support
 
 ### Comment contacter le support ?
-- Rejoignez notre [serveur Discord](https://discord.gg/1306370277931876444)
-- Envoyez un email à https://discord.com/channels/1306370277931876444/1330555947784867943
-- Ouvrez un ticket sur notre [GitHub](https://github.com/votre-compte/classementbot)
+- Rejoignez notre https://discord.gg/TXaxT8urPu
+- Envoyez un email à support@votredomaine.com
+- Ouvrez un ticket sur notre [GitHub](https://github.com/lalippxsau/classementbot)
 
 ### Comment suggérer de nouvelles fonctionnalités ?
 Nous accueillons les suggestions sur notre [serveur Discord](https://discord.gg/1325462831726071859) dans le canal #suggestions.
