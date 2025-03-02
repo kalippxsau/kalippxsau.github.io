@@ -31,17 +31,13 @@ Vérifiez que le bot est en ligne avec la commande `/ping`. Assurez-vous égalem
 Les badges sont vérifiés lors de la mise à jour de votre puissance. Essayez de mettre à jour votre puissance avec `/puissance` ou `/modifier_puissance` pour déclencher une vérification.
 
 ### Comment signaler un bug ?
-Rejoignez notre [serveur de support](https://discord.gg/1306370277931876444) et signalez le bug dans le canal #bug-reports. Incluez une description détaillée et des captures d'écran si possible.
+Rejoignez notre [serveur de support](https://discord.gg/TXaxT8urPu) et signalez le bug dans le canal #bug-reports. Incluez une description détaillée et des captures d'écran si possible.
 
 ## Support
-
 ### Comment contacter le support ?
-- Rejoignez notre https://discord.gg/TXaxT8urPu
+- Rejoignez notre [serveur Discord](https://discord.gg/TXaxT8urPu)
 - Envoyez un email à jarhod.lee@gmx.com
-- Ouvrez un ticket sur notre [GitHub](https://github.com/kalippxsau.github.io/classementbot)
+- Ouvrez un ticket sur notre [GitHub](https://github.com/kalippxsau/classementbot)
 
 ### Comment suggérer de nouvelles fonctionnalités ?
-Nous accueillons les suggestions sur notre [serveur Discord](https://discord.gg/1325462831726071859) dans le canal #suggestions.
-
-### Y a-t-il des tutoriels disponibles ?
-Oui, consultez notre [documentation complète](commands.md) qui inclut des exemples et des cas d'utilisation.
+Nous accueillons les suggestions sur notre [serveur Discord](https://discord.gg/TXaxT8urPu) dans le canal #suggestions.
