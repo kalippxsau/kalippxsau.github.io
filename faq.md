@@ -3,7 +3,7 @@
 ## Questions générales
 
 ### Comment ajouter ClassementBot à mon serveur ?
-Utilisez notre [lien d'invitation](https://discord.com/api/oauth2/authorize?client_id=1330555947784867943&permissions=8&scope=bot%20applications.commands) et suivez les instructions. Assurez-vous que le bot a toutes les permissions nécessaires.
+Utilisez notre [lien d'invitation](https://discord.gg/2rgUrfff) et suivez les instructions. Assurez-vous que le bot a toutes les permissions nécessaires.
 
 ### Le bot est-il gratuit ?
 Oui, toutes les fonctionnalités de base sont gratuites. Nous prévoyons d'ajouter des fonctionnalités premium dans le futur.
