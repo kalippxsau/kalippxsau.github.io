@@ -2,24 +2,25 @@
 
 ## Le bot de classement ultime pour votre serveur Discord
 
-ClassementBot est un puissant outil permettant de suivre la progression des joueurs sur votre serveur Discord. Grâce à ses systèmes de classement, de badges et de visualisation, il motive votre communauté comme jamais auparavant !  
-([docs.github.com](https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories) docs.github.com)
+ClassementBot est un puissant outil permettant de suivre la progression des joueurs sur votre serveur Discord. Avec ses systèmes de classement, de badges et de visualisation, motivez votre communauté comme jamais auparavant !
 
-[Ajouter à Discord](https://discord.com/api/oauth2/authorize?client_id=1338609444644458586&permissions=8&scope=bot%20applications.commands)
-
----
+[Ajouter à Discord](https://discord.com/api/oauth2/authorize?client_id=VOTRE_ID_BOT&permissions=8&scope=bot%20applications.commands)
 
 ## Fonctionnalités principales
 
-- 📊 **Classements multiples** - Suivez les performances par puissance totale ou par type  
-  ([github.com](https://github.com/TannerGabriel/discord-bot/blob/master/README.md) github.com)
-- 🚂 **Système de train** - Récompensez automatiquement les meilleurs joueurs  
-  ([docs.github.com](https://docs.github.com/en/get-started/exploring-integrations/about-using-integrations) docs.github.com)
-- 📈 **Graphiques de progression** - Visualisez l'évolution de chaque joueur  
-  ([medium.com](https://medium.com/@webdev_59507/integrating-github-repository-information-into-a-website-9af2118a65e1) medium.com)
-- 🏅 **Badges de réussite** - Motivez votre communauté avec des récompenses virtuelles  
-  ([Anteste/Discord-bot README](https://github.com/Anteste/Discord-bot/blob/master/README.md) github.com)
-- 🎯 **Système d'objectifs** - Définissez et suivez des objectifs personnalisés  
-  ([stackoverflow.com](https://stackoverflow.com/questions/23989232/is-there-a-way-to-represent-a-directory-tree-in-a-github-readme-md) stackoverflow.com)
+- 📊 **Classements multiples** - Suivez les performances par puissance totale ou par type
+- 🚂 **Système de train** - Récompensez automatiquement les meilleurs joueurs
+- 📈 **Graphiques de progression** - Visualisez l'évolution de chaque joueur
+- 🏅 **Badges de réussite** - Motivez votre communauté avec des récompenses virtuelles
+- 🎯 **Système d'objectifs** - Définissez et suivez des objectifs personnalisés
+
+## Pourquoi choisir ClassementBot ?
+
+- **Interface intuitive** - Commandes simples et documentation complète
+- **Visualisation avancée** - Graphiques de progression personnels et classements
+- **Personnalisation** - Adaptez le système à votre communauté
+- **Support actif** - Assistance et mises à jour régulières
+
+[Voir les commandes](commands.md) | [Découvrir les fonctionnalités](features.md) | [FAQ](faq.md)
 
 ---
