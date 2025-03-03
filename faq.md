@@ -37,7 +37,7 @@ Rejoignez notre [serveur de support](https://discord.gg/TXaxT8urPu) et signalez 
 ### Comment contacter le support ?
 - Rejoignez notre [serveur Discord](https://discord.gg/TXaxT8urPu)
 - Envoyez un email à jarhod.lee@gmx.com
-- Ouvrez un ticket sur notre [GitHub](https://github.com/kalippxsau/botclassement?tab=readme-ov-file#botclassement)
+- Ouvrez un ticket sur notre [GitHub](https://github.com/kalippxsau/botclassement)
 
 ### Comment suggérer de nouvelles fonctionnalités ?
 Nous accueillons les suggestions sur notre [serveur Discord](https://discord.gg/TXaxT8urPu) dans le canal #suggestions.
