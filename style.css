@@ -325,3 +325,35 @@ nav.scrolled {
 .faq-container {
     background-color: white;
     borde
+/* Correction pour la FAQ */
+.faq-container {
+    display: table;
+    width: 100%;
+    clear: both;
+}
+
+.faq-sidebar {
+    display: table-cell;
+    width: 25%;
+    vertical-align: top;
+    position: sticky;
+    top: 70px;
+}
+
+.faq-content {
+    display: table-cell;
+    width: 75%;
+    vertical-align: top;
+    padding: 0 20px;
+}
+
+@media (max-width: 992px) {
+    .faq-container {
+        display: block;
+    }
+    
+    .faq-sidebar, .faq-content {
+        display: block;
+        width: 100%;
+    }
+}
