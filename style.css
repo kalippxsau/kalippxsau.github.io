@@ -791,3 +791,11 @@ footer {
         flex-direction: column;
     }
 }
+/* Fix for FAQ page specific layout */
+.faq-page .container {
+    margin-top: 2rem; /* Positive margin instead of negative */
+}
+
+.faq-page .page-header {
+    padding-bottom: 2rem; /* Reduced padding at bottom */
+}
