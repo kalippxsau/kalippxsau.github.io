@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Bot de Classement Discord</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <!-- Copier le même style que dans faq.html -->
-   <link rel="stylesheet" href="style.css">
-<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav id="navbar">
@@ -28,73 +26,67 @@
             <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
     </nav>
-    <ul class="nav-links" id="navLinks">
-    <li><a href="index.html">Accueil</a></li>
-    <li><a href="index.html#features">Fonctionnalités</a></li>
-    <li><a href="index.html#how-to-use">Guide</a></li>
-    <li><a href="faq.html">FAQ</a></li>
-    <li><a href="contact.html">Contact</a></li>
-</ul>
+    
     <div class="page-header">
         <h1>Contactez-nous</h1>
         <p>Vous avez des questions ou des suggestions ? N'hésitez pas à nous contacter.</p>
     </div>
     
     <div class="container">
-        <div class="contact-container" style="background-color: white; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); padding: 3rem; margin-bottom: 3rem;">
-            <div class="contact-info" style="margin-bottom: 2rem; text-align: center;">
-                <h2 style="color: var(--secondary-color); margin-bottom: 1rem;">Nous sommes à votre écoute</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Nous sommes à votre écoute</h2>
                 <p>Vous pouvez nous contacter de plusieurs façons :</p>
             </div>
             
-            <div class="contact-methods" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-bottom: 3rem;">
-                <div class="contact-method" style="flex: 1; min-width: 250px; padding: 1.5rem; background-color: var(--light-bg); border-radius: 8px; text-align: center;">
-                    <div style="font-size: 3rem; margin-bottom: 1rem; color: var(--primary-color);">📱</div>
-                    <h3 style="margin-bottom: 0.5rem;">Discord</h3>
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <div>📱</div>
+                    <h3>Discord</h3>
                     <p>Rejoignez notre serveur Discord et posez vos questions directement.</p>
-                    <a href="#" style="display: inline-block; margin-top: 1rem; background-color: var(--primary-color); color: white; padding: 0.5rem 1rem; border-radius: 30px; text-decoration: none; font-weight: bold;">Rejoindre le serveur</a>
+                    <a href="#" class="btn">Rejoindre le serveur</a>
                 </div>
                 
-                <div class="contact-method" style="flex: 1; min-width: 250px; padding: 1.5rem; background-color: var(--light-bg); border-radius: 8px; text-align: center;">
-                    <div style="font-size: 3rem; margin-bottom: 1rem; color: var(--primary-color);">✉️</div>
-                    <h3 style="margin-bottom: 0.5rem;">Email</h3>
+                <div class="contact-method">
+                    <div>✉️</div>
+                    <h3>Email</h3>
                     <p>Envoyez-nous un email et nous vous répondrons dans les plus brefs délais.</p>
-                    <a href="mailto:contact@example.com" style="display: inline-block; margin-top: 1rem; background-color: var(--primary-color); color: white; padding: 0.5rem 1rem; border-radius: 30px; text-decoration: none; font-weight: bold;">Envoyer un email</a>
+                    <a href="mailto:contact@example.com" class="btn">Envoyer un email</a>
                 </div>
                 
-                <div class="contact-method" style="flex: 1; min-width: 250px; padding: 1.5rem; background-color: var(--light-bg); border-radius: 8px; text-align: center;">
-                    <div style="font-size: 3rem; margin-bottom: 1rem; color: var(--primary-color);">🐦</div>
-                    <h3 style="margin-bottom: 0.5rem;">Twitter</h3>
+                <div class="contact-method">
+                    <div>🐦</div>
+                    <h3>Twitter</h3>
                     <p>Suivez-nous sur Twitter pour les dernières nouvelles et mises à jour.</p>
-                    <a href="#" style="display: inline-block; margin-top: 1rem; background-color: var(--primary-color); color: white; padding: 0.5rem 1rem; border-radius: 30px; text-decoration: none; font-weight: bold;">Suivre sur Twitter</a>
+                    <a href="#" class="btn">Suivre sur Twitter</a>
                 </div>
             </div>
             
             <div class="contact-form">
-                <h2 style="color: var(--secondary-color); margin-bottom: 1.5rem; text-align: center;">Formulaire de contact</h2>
-                <form style="max-width: 600px; margin: 0 auto;">
-                    <div style="margin-bottom: 1.5rem;">
-                        <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Nom</label>
-                        <input type="text" id="name" name="name" required style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-color); border-radius: 5px;">
+                <h2>Formulaire de contact</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name" class="form-label">Nom</label>
+                        <input type="text" id="name" name="name" required class="form-input">
                     </div>
                     
-                    <div style="margin-bottom: 1.5rem;">
-                        <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Email</label>
-                        <input type="email" id="email" name="email" required style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-color); border-radius: 5px;">
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" required class="form-input">
                     </div>
                     
-                    <div style="margin-bottom: 1.5rem;">
-                        <label for="subject" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Sujet</label>
-                        <input type="text" id="subject" name="subject" required style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-color); border-radius: 5px;">
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Sujet</label>
+                        <input type="text" id="subject" name="subject" required class="form-input">
                     </div>
                     
-                    <div style="margin-bottom: 1.5rem;">
-                        <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Message</label>
-                        <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-color); border-radius: 5px;"></textarea>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" name="message" rows="5" required class="form-textarea"></textarea>
                     </div>
                     
                     <div style="text-align: center;">
-                        <button type="submit" style="background-color: var(--accent-color); color: white; padding: 0.8rem 2rem; border-radius: 30px; border: none; font-weight: bold; cursor: pointer;">Envoyer</button>
+                        <button type="submit" class="btn">Envoyer</button>
                     </div>
                 </form>
             </div>
@@ -102,36 +94,45 @@
     </div>
     
     <footer>
-        <!-- Copier le même footer que dans index.html et faq.html -->
         <div class="footer-content">
-            <!-- Contenu du footer -->
+            <div class="footer-section">
+                <h3>Bot Classement</h3>
+                <p>Un bot Discord moderne pour suivre vos performances et vous comparer avec la communauté.</p>
+                <div class="social-links">
+                    <a href="#"><span>🐦</span></a>
+                    <a href="#"><span>📱</span></a>
+                    <a href="#"><span>📘</span></a>
+                    <a href="#"><span>📸</span></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Liens rapides</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="index.html#features">Fonctionnalités</a></li>
+                    <li><a href="index.html#how-to-use">Guide</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Ressources</h3>
+                <ul>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Politique de confidentialité</a></li>
+                    <li><a href="#">Conditions d'utilisation</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
         </div>
         
         <div class="copyright">
             &copy; 2025 Bot de Classement Discord. Tous droits réservés.
         </div>
-
-        <div class="footer-section">
-    <h3>Liens rapides</h3>
-    <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="index.html#features">Fonctionnalités</a></li>
-        <li><a href="index.html#how-to-use">Guide</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</div>
     </footer>
     
-    <script>
     <script src="script.js"></script>
-    </script>
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Votre titre ici</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-</head>
 </body>
 </html>
