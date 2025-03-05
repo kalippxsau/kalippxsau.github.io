@@ -8,47 +8,164 @@
         :root {
             --primary-color: #5865F2;
             --secondary-color: #36393F;
+            --accent-color: #4EAF50;
             --text-color: #333;
             --light-bg: #f9f9f9;
             --border-color: #ddd;
+            --header-height: 70px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            margin: 0;
-            padding: 0;
             color: var(--text-color);
             background-color: #fff;
         }
         
-        header {
-            background-color: var(--primary-color);
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--secondary-color);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            height: var(--header-height);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        nav.scrolled {
+            background-color: rgba(54, 57, 63, 0.95);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
             color: white;
-            padding: 2rem 0;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-icon {
+            margin-right: 10px;
+            font-size: 2rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+        
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            color: white;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: calc(var(--header-height) + 3rem) 2rem 5rem;
         }
         
-        h1 {
-            margin: 0;
+        .page-header h1 {
             font-size: 2.5rem;
+            margin-bottom: 1rem;
         }
         
-        .subtitle {
+        .page-header p {
             font-size: 1.2rem;
             opacity: 0.9;
-            margin-top: 0.5rem;
+            max-width: 700px;
+            margin: 0 auto;
         }
         
         .container {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 0 20px;
+            max-width: 1000px;
+            margin: -3rem auto 4rem;
+            padding: 0 2rem;
+            position: relative;
+        }
+        
+        .faq-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .faq-sidebar {
+            position: sticky;
+            top: calc(var(--header-height) + 2rem);
+            float: left;
+            width: 25%;
+            padding: 2rem 0;
+            background-color: var(--light-bg);
+            border-right: 1px solid var(--border-color);
+            height: 100%;
+        }
+        
+        .faq-sidebar ul {
+            list-style: none;
+        }
+        
+        .faq-sidebar li {
+            padding: 0.5rem 1.5rem;
+            border-left: 3px solid transparent;
+            margin-bottom: 0.5rem;
+        }
+        
+        .faq-sidebar li.active {
+            border-left-color: var(--primary-color);
+            background-color: rgba(88, 101, 242, 0.1);
+        }
+        
+        .faq-sidebar a {
+            color: var(--text-color);
+            text-decoration: none;
+            display: block;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .faq-sidebar li.active a, .faq-sidebar a:hover {
+            color: var(--primary-color);
+        }
+        
+        .faq-content {
+            float: right;
+            width: 75%;
+            padding: 3rem 2rem;
         }
         
         .faq-section {
             margin-bottom: 3rem;
+            scroll-margin-top: calc(var(--header-height) + 2rem);
         }
         
         .section-title {
@@ -56,6 +173,7 @@
             padding-bottom: 8px;
             color: var(--secondary-color);
             font-size: 1.5rem;
+            margin-bottom: 1.5rem;
         }
         
         .faq-item {
@@ -64,6 +182,12 @@
             border-radius: 8px;
             background-color: var(--light-bg);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .faq-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
         
         .question {
@@ -98,14 +222,6 @@
             font-weight: bold;
         }
         
-        code {
-            background-color: #f0f0f0;
-            padding: 2px 4px;
-            border-radius: 4px;
-            font-family: monospace;
-            font-size: 0.9em;
-        }
-        
         .command {
             background-color: #36393F;
             color: white;
@@ -115,123 +231,462 @@
             font-size: 0.9em;
         }
         
-        .footer {
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        footer {
+            background-color: #1E2124;
+            color: #999;
+            padding: 3rem 2rem;
             text-align: center;
+            clear: both;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .footer-section {
+            flex: 1 1 300px;
+            margin-bottom: 2rem;
+            padding: 0 1rem;
+            text-align: left;
+        }
+        
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-section a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: var(--primary-color);
+        }
+        
+        .social-links {
+            display: flex;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #36393F;
+            margin-right: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            width: 100%;
             margin-top: 3rem;
-            padding: 1rem 0;
-            border-top: 1px solid var(--border-color);
-            color: #888;
+            padding-top: 1.5rem;
+            border-top: 1px solid #36393F;
             font-size: 0.9rem;
         }
         
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .mobile-sidebar-toggle {
+            display: none;
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        
         /* Responsive design */
+        @media (max-width: 992px) {
+            .faq-sidebar, .faq-content {
+                float: none;
+                width: 100%;
+            }
+            
+            .faq-sidebar {
+                position: relative;
+                top: 0;
+                height: auto;
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+                display: none;
+            }
+            
+            .faq-sidebar.active {
+                display: block;
+            }
+            
+            .mobile-sidebar-toggle {
+                display: block;
+            }
+        }
+        
         @media (max-width: 768px) {
-            h1 {
+            nav {
+                padding: 0 1rem;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: var(--header-height);
+                left: 0;
+                width: 100%;
+                flex-direction: column;
+                background-color: var(--secondary-color);
+                padding: 1rem 0;
+                transform: translateY(-100%);
+                opacity: 0;
+                transition: all 0.3s ease;
+                pointer-events: none;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: all;
+            }
+            
+            .nav-links li {
+                margin: 0;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .nav-links a {
+                display: block;
+                padding: 1rem;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .page-header h1 {
                 font-size: 2rem;
             }
             
-            .subtitle {
+            .page-header p {
                 font-size: 1rem;
             }
             
-            .faq-item {
-                padding: 1rem;
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-section {
+                margin-bottom: 2rem;
+            }
+            
+            .social-links {
+                justify-content: center;
             }
         }
     </style>
 </head>
 <body>
-    <header>
+    <nav id="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">🚂</span>
+            <span>Bot Classement</span>
+        </a>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            ☰
+        </button>
+        
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#features">Fonctionnalités</a></li>
+            <li><a href="index.html#how-to-use">Guide</a></li>
+            <li><a href="faq.html" class="active">FAQ</a></li>
+            <li><a href="index.html#discord">Discord</a></li>
+        </ul>
+    </nav>
+    
+    <div class="page-header">
         <h1>Foire Aux Questions</h1>
-        <div class="subtitle">Bot de Classement Discord</div>
-    </header>
+        <p>Trouvez des réponses aux questions les plus fréquentes sur le Bot de Classement Discord.</p>
+    </div>
     
     <div class="container">
-        <div class="faq-section">
-            <h2 class="section-title">Commandes de base</h2>
-            
-            <div class="faq-item">
-                <p class="question">Comment voir la liste des commandes disponibles ?</p>
-                <p class="answer">Utilisez <span class="command">!aide</span> ou <span class="command">/aide</span> pour afficher la liste complète des commandes disponibles.</p>
-            </div>
-            
-            <div class="faq-item">
-                <p class="question">Comment enregistrer ma puissance ?</p>
-                <p class="answer">Utilisez la commande <span class="command">!puissance &lt;T1&gt; &lt;T2&gt; &lt;T3&gt;</span> ou <span class="command">/puissance</span> avec les paramètres appropriés.<br>
-                Exemple : <span class="command">!puissance 100 200 300</span> ou <span class="command">/puissance T1:100 T2:200 T3:300</span></p>
-            </div>
-            
-            <div class="faq-item">
-                <p class="question">Comment modifier ma puissance existante ?</p>
-                <p class="answer">Utilisez <span class="command">!modifier_puissance &lt;T1&gt; &lt;T2&gt; &lt;T3&gt;</span> ou <span class="command">/modifier_puissance</span> avec les nouvelles valeurs.</p>
-            </div>
-            
-            <div class="faq-item">
-                <p class="question">Comment consulter le classement des joueurs ?</p>
-                <p class="answer">Plusieurs commandes sont disponibles :<br>
-                - <span class="command">!classement [page]</span> ou <span class="command">/classement</span> : classement général<br>
-                - <span class="command">!classement_hebdo [page]</span> ou <span class="command">/classement_hebdo</span> : classement hebdomadaire<br>
-                - <span class="command">!classement_type &lt;total|t1|t2|t3&gt; [page]</span> ou <span class="command">/classement_type</span> : classement par type de puissance</p>
-            </div>
-        </div>
+        <button class="mobile-sidebar-toggle" id="mobileSidebarToggle">Afficher les catégories ↓</button>
         
-        <div class="faq-section">
-            <h2 class="section-title">Statistiques et progression</h2>
-            
-            <div class="faq-item">
-                <p class="question">Comment voir mes statistiques ?</p>
-                <p class="answer">Utilisez <span class="command">!stats</span> ou <span class="command">/stats</span> pour voir vos statistiques personnelles. Vous pouvez également consulter les statistiques d'un autre membre en mentionnant son nom : <span class="command">!stats @membre</span> ou <span class="command">/stats membre:@utilisateur</span>.</p>
+        <div class="faq-container">
+            <div class="faq-sidebar" id="faqSidebar">
+                <ul>
+                    <li class="active"><a href="#basic-commands">Commandes de base</a></li>
+                    <li><a href="#stats-progress">Statistiques et progression</a></li>
+                    <li><a href="#badges-rewards">Badges et récompenses</a></li>
+                    <li><a href="#misc-questions">Questions diverses</a></li>
+                </ul>
             </div>
             
-            <div class="faq-item">
-                <p class="question">Comment suivre ma progression dans le temps ?</p>
-                <p class="answer">La commande <span class="command">!progression</span> ou <span class="command">/progression</span> génère un graphique montrant l'évolution de votre puissance au fil du temps.</p>
-            </div>
-            
-            <div class="faq-item">
-                <p class="question">Comment définir un objectif de puissance ?</p>
-                <p class="answer">Utilisez <span class="command">!objectif &lt;valeur&gt;</span> ou <span class="command">/objectif valeur:&lt;nombre&gt;</span> pour définir un objectif personnel. Utilisez la même commande sans valeur pour consulter votre progression vers cet objectif.</p>
-            </div>
-        </div>
-        
-        <div class="faq-section">
-            <h2 class="section-title">Badges et récompenses</h2>
-            
-            <div class="faq-item">
-                <p class="question">Comment fonctionnent les badges ?</p>
-                <p class="answer">Les badges sont des récompenses attribuées automatiquement lorsque vous atteignez certains paliers. Utilisez <span class="command">!badges</span> ou <span class="command">/badges</span> pour voir les badges que vous avez obtenus.</p>
-            </div>
-            
-            <div class="faq-item">
-                <p class="question">Quels badges puis-je obtenir ?</p>
-                <p class="answer">Plusieurs badges sont disponibles :<br>
-                - 🏆 <strong>Millénaire</strong> : Atteindre 1000 de puissance totale<br>
-                - 👑 <strong>Légende</strong> : Atteindre 5000 de puissance totale<br>
-                - 🔥 <strong>Maître du Feu</strong> : Atteindre 500 de puissance T1<br>
-                - ⚡ <strong>Seigneur de la Foudre</strong> : Atteindre 500 de puissance T2<br>
-                - 💧 <strong>Gardien des Eaux</strong> : Atteindre 500 de puissance T3<br>
-                - ☯️ <strong>Harmonieux</strong> : Maintenir un équilibre entre T1, T2 et T3<br>
-                - 🔄 <strong>Joueur Dédié</strong> : Mettre à jour sa puissance au moins 10 fois</p>
-            </div>
-        </div>
-        
-        <div class="faq-section">
-            <h2 class="section-title">Questions diverses</h2>
-            
-            <div class="faq-item">
-                <p class="question">Qu'est-ce que le "train" dans le bot ?</p>
-                <p class="answer">Le train représente les 7 meilleurs joueurs du classement. Utilisez <span class="command">!train</span> ou <span class="command">/train</span> pour voir les conducteurs actuels du train. La commande <span class="command">!conducteur</span> ou <span class="command">/conducteur</span> montre uniquement le joueur en tête du classement.</p>
-            </div>
-            
-            <div class="faq-item">
-                <p class="question">Comment signaler un bug ou un problème avec le bot ?</p>
-                <p class="answer">Si vous rencontrez un problème avec le bot, veuillez contacter un administrateur du serveur ou le créateur du bot directement.</p>
+            <div class="faq-content">
+                <div id="basic-commands" class="faq-section">
+                    <h2 class="section-title">Commandes de base</h2>
+                    
+                    <div class="faq-item">
+                        <p class="question">Comment voir la liste des commandes disponibles ?</p>
+                        <p class="answer">Utilisez <span class="command">!aide</span> ou <span class="command">/aide</span> pour afficher la liste complète des commandes disponibles.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <p class="question">Comment enregistrer ma puissance ?</p>
+                        <p class="answer">Utilisez la commande <span class="command">!puissance &lt;T1&gt; &lt;T2&gt; &lt;T3&gt;</span> ou <span class="command">/puissance</span> avec les paramètres appropriés.<br>
+                        Exemple : <span class="command">!puissance 100 200 300</span> ou <span class="command">/puissance T1:100 T2:200 T3:300</span></p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <p class="question">Comment modifier ma puissance existante ?</p>
+                        <p class="answer">Utilisez <span class="command">!modifier_puissance &lt;T1&gt; &lt;T2&gt; &lt;T3&gt;</span> ou <span class="command">/modifier_puissance</span> avec les nouvelles valeurs.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <p class="question">Comment consulter le classement des joueurs ?</p>
+                        <p class="answer">Plusieurs commandes sont disponibles :<br>
+                        - <span class="command">!classement [page]</span> ou <span class="command">/classement</span> : classement général<br>
+                        - <span class="command">!classement_hebdo [page]</span> ou <span class="command">/classement_hebdo</span> : classement hebdomadaire<br>
+                        - <span class="command">!classement_type &lt;total|t1|t2|t3&gt; [page]</span> ou <span class="command">/classement_type</span> : classement par type de puissance</p>
+                    </div>
+                </div>
+                
+                <div id="stats-progress" class="faq-section">
+                    <h2 class="section-title">Statistiques et progression</h2>
+                    
+                    <div class="faq-item">
+                        <p class="question">Comment voir mes statistiques ?</p>
+                        <p class="answer">Utilisez <span class="command">!stats</span> ou <span class="command">/stats</span> pour voir vos statistiques personnelles. Vous pouvez également consulter les statistiques d'un autre membre en mentionnant son nom : <span class="command">!stats @membre</span> ou <span class="command">/stats membre:@utilisateur</span>.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <p class="question">Comment suivre ma progression dans le temps ?</p>
+                        <p class="answer">La commande <span class="command">!progression</span> ou <span class="command">/progression</span> génère un graphique montrant l'évolution de votre puissance au fil du temps.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <p class="question">Comment définir un objectif de puissance ?</p>
+                        <p class="answer">Utilisez <span class="command">!objectif &lt;valeur&gt;</span> ou <span class="command">/objectif valeur:&lt;nombre&gt;</span> pour définir un objectif personnel. Utilisez la même commande sans valeur pour consulter votre progression vers cet objectif.</p>
+                    </div>
+                </div>
+                
+                <div id="badges-rewards" class="faq-section">
+                    <h2 class="section-title">Badges et récompenses</h2>
+                    
+                    <div class="faq-item">
+                        <p class="question">Comment fonctionnent les badges ?</p>
+                        <p class="answer">Les badges sont des récompenses attribuées automatiquement lorsque vous atteignez certains paliers. Utilisez <span class="command">!badges</span> ou <span class="command">/badges</span> pour voir les badges que vous avez obtenus.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <p class="question">Quels badges puis-je obtenir ?</p>
+                        <p class="answer">Plusieurs badges sont disponibles :<br>
+                        - 🏆 <strong>Millénaire</strong> : Atteindre 1000 de puissance totale<br>
+                        - 👑 <strong>Légende</strong> : Atteindre 5000 de puissance totale<br>
+                        - 🔥 <strong>Maître du Feu</strong> : Atteindre 500 de puissance T1<br>
+                        - ⚡ <strong>Seigneur de la Foudre</strong> : Atteindre 500 de puissance T2<br>
+                        - 💧 <strong>Gardien des Eaux</strong> : Atteindre 500 de puissance T3<br>
+                        - ☯️ <strong>Harmonieux</strong> : Maintenir un équilibre entre T1, T2 et T3<br>
+                        - 🔄 <strong>Joueur Dédié</strong> : Mettre à jour sa puissance au moins 10 fois</p>
+                    </div>
+                </div>
+                
+                <div id="misc-questions" class="faq-section">
+                    <h2 class="section-title">Questions diverses</h2>
+                    
+                    <div class="faq-item">
+                        <p class="question">Qu'est-ce que le "train" dans le bot ?</p>
+                        <p class="answer">Le train représente les 7 meilleurs joueurs du classement. Utilisez <span class="command">!train</span> ou <span class="command">/train</span> pour voir les conducteurs actuels du train. La commande <span class="command">!conducteur</span> ou <span class="command">/conducteur</span> montre uniquement le joueur en tête du classement.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <p class="question">Comment signaler un bug ou un problème avec le bot ?</p>
+                        <p class="answer">Si vous rencontrez un problème avec le bot, veuillez contacter un administrateur du serveur ou le créateur du bot directement.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     
-    <div class="footer">
-        &copy; 2025 Bot de Classement Discord | Développé avec ❤️ pour la communauté
-    </div>
+    <a href="#" class="back-to-top" id="backToTop">↑</a>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Bot Classement</h3>
+                <p>Un bot Discord moderne pour suivre vos performances et vous comparer avec la communauté.</p>
+                <div class="social-links">
+                    <a href="#"><span>🐦</span></a>
+                    <a href="#"><span>📱</span></a>
+                    <a href="#"><span>📘</span></a>
+                    <a href="#"><span>📸</span></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Liens rapides</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="index.html#features">Fonctionnalités</a></li>
+                    <li><a href="index.html#how-to-use">Guide</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="index.html#discord">Discord</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Ressources</h3>
+                <ul>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Politique de confidentialité</a></li>
+                    <li><a href="#">Conditions d'utilisation</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            &copy; 2025 Bot de Classement Discord. Tous droits réservés.
+        </div>
+    </footer>
+    
+    <script>
+        // Navigation sticky
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 10) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Mobile sidebar toggle
+        const mobileSidebarToggle = document.getElementById('mobileSidebarToggle');
+        const faqSidebar = document.getElementById('faqSidebar');
+        
+        mobileSidebarToggle.addEventListener('click', function() {
+            faqSidebar.classList.toggle('active');
+            this.textContent = faqSidebar.classList.contains('active') ? 'Masquer les catégories ↑' : 'Afficher les catégories ↓';
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Sidebar navigation
+        document.querySelectorAll('.faq-sidebar a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all links
+                document.querySelectorAll('.faq-sidebar li').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Add active class to clicked link's parent
+                this.parentNode.classList.add('active');
+                
+                // Scroll to section
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+                
+                // On mobile, close the sidebar after clicking
+                if (window.innerWidth < 992) {
+                    faqSidebar.classList.remove('active');
+                    mobileSidebarToggle.textContent = 'Afficher les catégories ↓';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
