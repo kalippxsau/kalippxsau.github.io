@@ -1,209 +1,43 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bot de Classement Discord</title>
-    <style>
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-    </style>
-</head>
-<body>
-    <nav id="navbar">
-        <a href="index.html" class="logo">
-            <span class="logo-icon">🚂</span>
-            <span>Bot Classement</span>
-        </a>
-        
-        <button class="mobile-menu-btn" id="mobileMenuBtn">
-            ☰
-        </button>
-        
-        <ul class="nav-links" id="navLinks">
-            <li><a href="index.html" class="active">Accueil</a></li>
-            <li><a href="#features">Fonctionnalités</a></li>
-            <li><a href="#how-to-use">Guide</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="#discord">Discord</a></li>
-        </ul>
-    </nav>
-    <ul class="nav-links" id="navLinks">
-    <li><a href="index.html">Accueil</a></li>
-    <li><a href="index.html#features">Fonctionnalités</a></li>
-    <li><a href="index.html#how-to-use">Guide</a></li>
-    <li><a href="faq.html">FAQ</a></li>
-    <li><a href="contact.html">Contact</a></li>
-</ul>
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Bot de Classement Discord</h1>
-            <p>Suivez vos performances, comparez-vous avec vos amis et établissez des objectifs avec notre bot de classement interactif pour Discord.</p>
-            <div>
-                <a href="#features" class="btn">Découvrir</a>
-                <a href="#discord" class="btn btn-secondary">Rejoindre Discord</a>
-            </div>
-        </div>
-    </section>
-    
-    <section class="features" id="features">
-        <h2 class="section-title">Fonctionnalités</h2>
-        <div class="features-container">
-            <div class="feature-box">
-                <div class="feature-icon">📊</div>
-                <h3>Classements</h3>
-                <p>Consultez facilement les classements généraux, hebdomadaires et par types de puissance pour vous comparer à la communauté.</p>
-            </div>
-            
-            <div class="feature-box">
-                <div class="feature-icon">📈</div>
-                <h3>Suivi de progression</h3>
-                <p>Visualisez votre progression avec des graphiques personnalisés et suivez votre évolution dans le temps.</p>
-            </div>
-            
-            <div class="feature-box">
-                <div class="feature-icon">🏆</div>
-                <h3>Badges et récompenses</h3>
-                <p>Gagnez des badges et des récompenses en atteignant certains paliers et accomplissements.</p>
-            </div>
-            
-            <div class="feature-box">
-                <div class="feature-icon">🎯</div>
-                <h3>Objectifs personnels</h3>
-                <p>Définissez et suivez vos objectifs personnels pour rester motivé et progresser constamment.</p>
-            </div>
-            
-            <div class="feature-box">
-                <div class="feature-icon">🚂</div>
-                <h3>Système de train</h3>
-                <p>Rejoignez l'élite et devenez un "conducteur du train" en atteignant le top du classement.</p>
-            </div>
-            
-            <div class="feature-box">
-                <div class="feature-icon">⚙️</div>
-                <h3>Commandes intuitives</h3>
-                <p>Utilisez des commandes traditionnelles ou slash pour interagir facilement avec le bot.</p>
-            </div>
-        </div>
-    </section>
-    
-    <section class="how-to-use" id="how-to-use">
-        <h2 class="section-title">Comment utiliser le bot</h2>
-        <div class="steps-container">
-            <div class="step">
-                <div class="step-content">
-                    <div class="step-number">1</div>
-                    <h3>Rejoignez notre serveur Discord</h3>
-                    <p>Cliquez sur le lien d'invitation et rejoignez notre communauté Discord pour accéder au bot de classement.</p>
-                </div>
-                <div class="step-image">
-                    <img src="images/rejoindre-25-03-05-125646.png" alt="Rejoindre Discord">
-                </div>
-            </div>
-            
-            <div class="step">
-                <div class="step-content">
-                    <div class="step-number">2</div>
-                    <h3>Enregistrez votre puissance</h3>
-                    <p>Utilisez la commande <code>!puissance</code> ou <code>/puissance</code> pour enregistrer vos valeurs T1, T2 et T3.</p>
-                </div>
-                <div class="step-image">
-                    <img src="images/enregistrer-puissance%202025-03-05%20162810.png" alt="Enregistrer puissance">
-                </div>
-            </div>
-            
-            <div class="step">
-                <div class="step-content">
-                    <div class="step-number">3</div>
-                    <h3>Consultez les classements</h3>
-                    <p>Explorez les différents classements avec <code>!classement</code>, <code>!classement_hebdo</code> ou <code>!classement_type</code>.</p>
-                </div>
-                <div class="step-image">
-                    <img src="images/classement%202025-03-05%20173233.png" alt="Consulter classements">
-                </div>
-            </div>
-            
-            <div class="step">
-                <div class="step-content">
-                    <div class="step-number">4</div>
-                    <h3>Suivez votre progression</h3>
-                    <p>Utilisez les commandes <code>!progression</code> et <code>!stats</code> pour suivre votre évolution et comparer vos performances.</p>
-                </div>
-                <div class="step-image">
-                    <img src="images/progression 2025-03-05 174130.png" alt="Suivre progression">
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="discord-invite" id="discord">
-        <div class="discord-container">
-            <h2>Rejoignez notre serveur Discord</h2>
-            <p>Prêt à commencer ? Rejoignez notre communauté Discord dès maintenant pour accéder au bot de classement et rencontrer d'autres joueurs !</p>
-            <a href="#" class="btn">Rejoindre Discord</a>
-        </div>
-    </section>
-    
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Bot Classement</h3>
-                <p>Un bot Discord moderne pour suivre vos performances et vous comparer avec la communauté.</p>
-                <div class="social-links">
-                    <a href="#"><span>🐦</span></a>
-                    <a href="#"><span>📱</span></a>
-                    <a href="#"><span>📘</span></a>
-                    <a href="#"><span>📸</span></a>
-                </div>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Liens rapides</h3>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="#features">Fonctionnalités</a></li>
-                    <li><a href="#how-to-use">Guide</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="#discord">Discord</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Ressources</h3>
-                <ul>
-                    <li><a href="#">Documentation</a></li>
-                    <li><a href="#">Politique de confidentialité</a></li>
-                    <li><a href="#">Conditions d'utilisation</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Liens rapides</h3>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="index.html#features">Fonctionnalités</a></li>
-                    <li><a href="index.html#how-to-use">Guide</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-               </ul>
-        </div>
-        </div>
-        
-        <div class="copyright">
-            &copy; 2025 Bot de Classement Discord. Tous droits réservés.
-        </div>
-    </footer>
-    
-    <script>
-      <script src="script.js"></script>
-    </script>
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Votre titre ici</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-</head>
-</body>
-</html>
+<div class="step">
+    <div class="step-content">
+        <div class="step-number">1</div>
+        <h3>Rejoignez notre serveur Discord</h3>
+        <p>Cliquez sur le lien d'invitation et rejoignez notre communauté Discord pour accéder au bot de classement.</p>
+    </div>
+    <div class="step-image">
+        <img src="images/rejoindre-discord.png" alt="Rejoindre Discord">
+    </div>
+</div>
+
+<div class="step">
+    <div class="step-content">
+        <div class="step-number">2</div>
+        <h3>Enregistrez votre puissance</h3>
+        <p>Utilisez la commande <code>!puissance</code> ou <code>/puissance</code> pour enregistrer vos valeurs T1, T2 et T3.</p>
+    </div>
+    <div class="step-image">
+        <img src="images/puissance.png" alt="Enregistrer puissance">
+    </div>
+</div>
+
+<div class="step">
+    <div class="step-content">
+        <div class="step-number">3</div>
+        <h3>Consultez les classements</h3>
+        <p>Explorez les différents classements avec <code>!classement</code>, <code>!classement_hebdo</code> ou <code>!classement_type</code>.</p>
+    </div>
+    <div class="step-image">
+        <img src="images/classement.png" alt="Consulter classements">
+    </div>
+</div>
+
+<div class="step">
+    <div class="step-content">
+        <div class="step-number">4</div>
+        <h3>Suivez votre progression</h3>
+        <p>Utilisez les commandes <code>!progression</code> et <code>!stats</code> pour suivre votre évolution et comparer vos performances.</p>
+    </div>
+    <div class="step-image">
+        <img src="images/progression.png" alt="Suivre progression">
+    </div>
+</div>
