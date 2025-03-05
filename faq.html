@@ -3,47 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ - Questions fréquemment posées</title>
+    <title>FAQ - Bot de Classement Discord</title>
     <style>
+        :root {
+            --primary-color: #5865F2;
+            --secondary-color: #36393F;
+            --text-color: #333;
+            --light-bg: #f9f9f9;
+            --border-color: #ddd;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
+            padding: 0;
+            color: var(--text-color);
+            background-color: #fff;
         }
-        h1 {
-            color: #333;
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        
+        .faq-section {
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 8px;
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+        }
+        
         .faq-item {
-            margin-bottom: 20px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
+            margin-bottom: 1.5rem;
+            padding: 1.2rem;
+            border-radius: 8px;
+            background-color: var(--light-bg);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
         }
+        
         .question {
             font-weight: bold;
-            color: #2c3e50;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
         }
+        
+        .question:before {
+            content: "Q:";
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
         .answer {
-            margin-top: 5px;
+            margin-top: 0.5rem;
+            margin-left: 1.5rem;
+            position: relative;
+        }
+        
+        .answer:before {
+            content: "R:";
+            position: absolute;
+            left: -1.5rem;
+            color: #777;
+            font-weight: bold;
+        }
+        
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+        
+        .command {
+            background-color: #36393F;
+            color: white;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1rem 0;
+            border-top: 1px solid var(--border-color);
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .faq-item {
+                padding: 1rem;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Foire Aux Questions</h1>
+    <header>
+        <h1>Foire Aux Questions</h1>
+        <div class="subtitle">Bot de Classement Discord</div>
+    </header>
     
-    <div class="faq-container">
-        <div class="faq-item">
-            <p class="question">Question 1: Comment utiliser le bot de classement?</p>
-            <p class="answer">Réponse: Utilisez la commande !aide pour voir toutes les commandes disponibles.</p>
+    <div class="container">
+        <div class="faq-section">
+            <h2 class="section-title">Commandes de base</h2>
+            
+            <div class="faq-item">
+                <p class="question">Comment voir la liste des commandes disponibles ?</p>
+                <p class="answer">Utilisez <span class="command">!aide</span> ou <span class="command">/aide</span> pour afficher la liste complète des commandes disponibles.</p>
+            </div>
+            
+            <div class="faq-item">
+                <p class="question">Comment enregistrer ma puissance ?</p>
+                <p class="answer">Utilisez la commande <span class="command">!puissance &lt;T1&gt; &lt;T2&gt; &lt;T3&gt;</span> ou <span class="command">/puissance</span> avec les paramètres appropriés.<br>
+                Exemple : <span class="command">!puissance 100 200 300</span> ou <span class="command">/puissance T1:100 T2:200 T3:300</span></p>
+            </div>
+            
+            <div class="faq-item">
+                <p class="question">Comment modifier ma puissance existante ?</p>
+                <p class="answer">Utilisez <span class="command">!modifier_puissance &lt;T1&gt; &lt;T2&gt; &lt;T3&gt;</span> ou <span class="command">/modifier_puissance</span> avec les nouvelles valeurs.</p>
+            </div>
+            
+            <div class="faq-item">
+                <p class="question">Comment consulter le classement des joueurs ?</p>
+                <p class="answer">Plusieurs commandes sont disponibles :<br>
+                - <span class="command">!classement [page]</span> ou <span class="command">/classement</span> : classement général<br>
+                - <span class="command">!classement_hebdo [page]</span> ou <span class="command">/classement_hebdo</span> : classement hebdomadaire<br>
+                - <span class="command">!classement_type &lt;total|t1|t2|t3&gt; [page]</span> ou <span class="command">/classement_type</span> : classement par type de puissance</p>
+            </div>
         </div>
         
-        <div class="faq-item">
-            <p class="question">Question 2: Comment enregistrer ma puissance?</p>
-            <p class="answer">Réponse: Utilisez la commande !puissance &lt;T1&gt; &lt;T2&gt; &lt;T3&gt; ou /puissance T1:xx T2:xx T3:xx.</p>
+        <div class="faq-section">
+            <h2 class="section-title">Statistiques et progression</h2>
+            
+            <div class="faq-item">
+                <p class="question">Comment voir mes statistiques ?</p>
+                <p class="answer">Utilisez <span class="command">!stats</span> ou <span class="command">/stats</span> pour voir vos statistiques personnelles. Vous pouvez également consulter les statistiques d'un autre membre en mentionnant son nom : <span class="command">!stats @membre</span> ou <span class="command">/stats membre:@utilisateur</span>.</p>
+            </div>
+            
+            <div class="faq-item">
+                <p class="question">Comment suivre ma progression dans le temps ?</p>
+                <p class="answer">La commande <span class="command">!progression</span> ou <span class="command">/progression</span> génère un graphique montrant l'évolution de votre puissance au fil du temps.</p>
+            </div>
+            
+            <div class="faq-item">
+                <p class="question">Comment définir un objectif de puissance ?</p>
+                <p class="answer">Utilisez <span class="command">!objectif &lt;valeur&gt;</span> ou <span class="command">/objectif valeur:&lt;nombre&gt;</span> pour définir un objectif personnel. Utilisez la même commande sans valeur pour consulter votre progression vers cet objectif.</p>
+            </div>
         </div>
+        
+        <div class="faq-section">
+            <h2 class="section-title">Badges et récompenses</h2>
+            
+            <div class="faq-item">
+                <p class="question">Comment fonctionnent les badges ?</p>
+                <p class="answer">Les badges sont des récompenses attribuées automatiquement lorsque vous atteignez certains paliers. Utilisez <span class="command">!badges</span> ou <span class="command">/badges</span> pour voir les badges que vous avez obtenus.</p>
+            </div>
+            
+            <div class="faq-item">
+                <p class="question">Quels badges puis-je obtenir ?</p>
+                <p class="answer">Plusieurs badges sont disponibles :<br>
+                - 🏆 <strong>Millénaire</strong> : Atteindre 1000 de puissance totale<br>
+                - 👑 <strong>Légende</strong> : Atteindre 5000 de puissance totale<br>
+                - 🔥 <strong>Maître du Feu</strong> : Atteindre 500 de puissance T1<br>
+                - ⚡ <strong>Seigneur de la Foudre</strong> : Atteindre 500 de puissance T2<br>
+                - 💧 <strong>Gardien des Eaux</strong> : Atteindre 500 de puissance T3<br>
+                - ☯️ <strong>Harmonieux</strong> : Maintenir un équilibre entre T1, T2 et T3<br>
+                - 🔄 <strong>Joueur Dédié</strong> : Mettre à jour sa puissance au moins 10 fois</p>
+            </div>
+        </div>
+        
+        <div class="faq-section">
+            <h2 class="section-title">Questions diverses</h2>
+            
+            <div class="faq-item">
+                <p class="question">Qu'est-ce que le "train" dans le bot ?</p>
+                <p class="answer">Le train représente les 7 meilleurs joueurs du classement. Utilisez <span class="command">!train</span> ou <span class="command">/train</span> pour voir les conducteurs actuels du train. La commande <span class="command">!conducteur</span> ou <span class="command">/conducteur</span> montre uniquement le joueur en tête du classement.</p>
+            </div>
+            
+            <div class="faq-item">
+                <p class="question">Comment signaler un bug ou un problème avec le bot ?</p>
+                <p class="answer">Si vous rencontrez un problème avec le bot, veuillez contacter un administrateur du serveur ou le créateur du bot directement.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        &copy; 2025 Bot de Classement Discord | Développé avec ❤️ pour la communauté
     </div>
 </body>
 </html>
